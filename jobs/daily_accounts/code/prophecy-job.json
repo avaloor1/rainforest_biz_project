@@ -1,0 +1,82 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "30819",
+    "jobId" : "jobs/daily_accounts",
+    "name" : "daily_accounts",
+    "schedule" : "0 0 0 * * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : true,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "oncall@rainforest.biz",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    }
+  },
+  "processes" : {
+    "vc66VCyByRS4TEcV7O3li" : {
+      "id" : "vc66VCyByRS4TEcV7O3li",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "enrich_accounts",
+        "slug" : "enrich_accounts",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "out",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/enrich_accounts",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "rainforest_biz_project" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "projectId" : "53451"
+      }
+    }
+  },
+  "connections" : [ ]
+}
