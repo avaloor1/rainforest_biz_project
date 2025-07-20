@@ -1,0 +1,2576 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.10.3",
+        "pyPiVersion" : "1.9.49"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/enrich_accounts",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "enrich_accounts",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "30819",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "avalooraigmailcomteam.rainforestbizproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "courselabs.courselabsources.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "13587",
+      "projectName" : "course_lab_sources",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "enrich_accounts",
+    "configTopLevelPackage" : "enrich_accounts",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "sin8eMyabTro-Q3Y5h5j9$$dePSueZ6Zgt9xJlZ15H-r",
+    "source" : "B11AuWIsZWvLM0b8k_mCe$$vrD4IXutRh-gVyPJ94IR6",
+    "sourcePort" : "E6EuKTCodmYtc1zu0fzVY$$u9J65lmBTm1KCjiPqko8V",
+    "target" : "flld1kYyS-l-jN4X9vPtB$$t_gn__td6wxIJiaaHrkZJ",
+    "targetPort" : "CxB6yVD0QyF0QlsGxfaMA$$il-GiWNufQZPNOlXfZ16r"
+  }, {
+    "id" : "kY_Ctqh61vI2A4d3fDw-M$$aqX-ykEA3Ec-OZ3zbvLvS",
+    "source" : "flld1kYyS-l-jN4X9vPtB$$t_gn__td6wxIJiaaHrkZJ",
+    "sourcePort" : "kcZXH37rvlZcrxhzyhXO0$$mrGO5NfFfCtSB4FdR8MTi",
+    "target" : "uIaA25ssM4xp6pmmXHXYu$$Pid4e4YMsijygYoxdo7NB",
+    "targetPort" : "Fx7oy5zTVhYY5T2HJYw1L$$04yHkI69KZHd4rpFRr3Pw"
+  }, {
+    "id" : "rSAUAwfsleV6YZh9bzQ9j",
+    "source" : "bHwA49OF8PcFUehkVdUvX$$PSTsDRIjQDXA5ikj8NSdw",
+    "sourcePort" : "Kkd6pcsudQWvp7DzDgtbF$$AP6xMW0Izc_1KUZpaWMDv",
+    "target" : "G7kFrVLkU8mVDmB6FRP93$$szTHBgWv0VNTgwGxkuMT0",
+    "targetPort" : "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl"
+  }, {
+    "id" : "02jfcihbEDOSVgutEq4mI",
+    "source" : "uIaA25ssM4xp6pmmXHXYu$$Pid4e4YMsijygYoxdo7NB",
+    "sourcePort" : "JyONtq7bzRF7TEBVHutd_$$f6059oGj0dlzTKuuyBh_B",
+    "target" : "G7kFrVLkU8mVDmB6FRP93$$szTHBgWv0VNTgwGxkuMT0",
+    "targetPort" : "yILlC8viI0mUlkqVMYs6H$$1JMs-ZvbesjIPKoL_GDAv"
+  }, {
+    "id" : "5o_iieVnH9MiyYNqX61Rj$$T3lEBloQW5Bpo-9pdKJ6P",
+    "source" : "G7kFrVLkU8mVDmB6FRP93$$szTHBgWv0VNTgwGxkuMT0",
+    "sourcePort" : "RRvahEKwi_EervSbG-ydR$$iZ3GZl7kH-TQasGKF8FyJ",
+    "target" : "2RDKduvlSXxvYEx7gG2m8$$3haBOqpZo5Lbi8F9av4iF",
+    "targetPort" : "wIjcXyiZHJ3K3Hi-U_n-V$$OYER3J-pqXNKiJYlGWxD6"
+  } ],
+  "processes" : {
+    "bHwA49OF8PcFUehkVdUvX$$PSTsDRIjQDXA5ikj8NSdw" : {
+      "id" : "bHwA49OF8PcFUehkVdUvX$$PSTsDRIjQDXA5ikj8NSdw",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "salesforce-Account",
+        "slug" : "salesforce_Account",
+        "x" : -1920,
+        "y" : -760,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Kkd6pcsudQWvp7DzDgtbF$$AP6xMW0Izc_1KUZpaWMDv",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "gitUri=http://gitserver:3000/wvwrv9bI_team_5938/wvwrv9bI_project_13587.git&subPath=&tag=course_lab_sources/0.0.3&projectSubscriptionProjectId=13587&path=datasets/salesforce-Account"
+      }
+    },
+    "flld1kYyS-l-jN4X9vPtB$$t_gn__td6wxIJiaaHrkZJ" : {
+      "id" : "flld1kYyS-l-jN4X9vPtB$$t_gn__td6wxIJiaaHrkZJ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SelectFields",
+        "slug" : "SelectFields",
+        "x" : -1740,
+        "y" : -420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CxB6yVD0QyF0QlsGxfaMA$$il-GiWNufQZPNOlXfZ16r",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each opportunity record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IsDeleted",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the opportunity has been deleted; represented as an integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AccountId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the account associated with the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IsPrivate",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the opportunity is private; represented as an integer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the opportunity; Represents the title or identifier of the sales opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Description",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "A brief overview of the opportunity; Provides context or details about the sales opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "StageName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Current stage of the sales opportunity; Indicates the progress of the opportunity in the sales pipeline.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "StageSortOrder",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Numerical order of the stage in the sales process; Used to determine the sequence of stages in the sales pipeline.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Amount",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total monetary value of the opportunity; Represents the potential revenue from the sale.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Probability",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Likelihood of closing the opportunity; Expressed as a percentage indicating the chance of winning the deal.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ExpectedRevenue",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Projected revenue from the opportunity; Calculated based on the Amount and Probability.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TotalOpportunityQuantity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total quantity of items associated with the opportunity; Represents the number of units involved in the deal.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CloseDate",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The date and time when the opportunity is expected to close; Format is ISO 8601.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of the opportunity; Indicates the nature of the sales opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NextStep",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The next action to be taken in the sales process for the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LeadSource",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Source from which the lead originated; Indicates how the opportunity was generated.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IsClosed",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the opportunity is closed; Values are 0 for open and 1 for closed.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IsWon",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the opportunity was won; Values are 0 for lost and 1 for won.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ForecastCategory",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Category of the opportunity for forecasting purposes; Includes values like Pipeline, Closed, etc.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ForecastCategoryName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Descriptive name of the forecast category for the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CampaignId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the marketing campaign associated with the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "HasOpportunityLineItem",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the opportunity has associated line items.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Pricebook2Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the price book associated with the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OwnerId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the user or team responsible for managing the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CreatedDate",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date and time when the opportunity was created; Timestamp indicating the creation moment.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CreatedById",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier of the user who created the opportunity; Unique ID for the creator.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastModifiedDate",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date and time when the opportunity was last modified; Timestamp indicating the last update.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastModifiedById",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier of the user who last modified the opportunity; Unique ID for the last updater.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SystemModstamp",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating the last time the record was modified in the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastActivityDate",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of the most recent activity related to the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastStageChangeDate",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date when the opportunity's stage was last changed.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FiscalYear",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The fiscal year in which the opportunity is recorded, represented as a four-digit year.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FiscalQuarter",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The fiscal quarter during which the opportunity is recorded; Indicates the quarter of the financial year.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ContactId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the contact associated with the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PrimaryPartnerAccountId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the primary partner account linked to the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ContractId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the contract associated with the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastAmountChangedHistoryId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the last history record that tracks changes to the opportunity amount.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastCloseDateChangedHistoryId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the last history record that tracks changes to the opportunity close date.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeliveryInstallationStatus__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Status of delivery and installation for the opportunity; Indicates the current state of delivery.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TrackingNumber__c",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Tracking number associated with the opportunity; Used for monitoring shipment status.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OrderNumber__c",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the order associated with the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CurrentGenerators__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of generators currently being offered in the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MainCompetitors__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Key competitors involved in the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "kcZXH37rvlZcrxhzyhXO0$$mrGO5NfFfCtSB4FdR8MTi",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "AccountId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "AccountId"
+          },
+          "description" : ""
+        }, {
+          "target" : "Amount",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Amount"
+          },
+          "description" : ""
+        }, {
+          "target" : "ExpectedRevenue",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "ExpectedRevenue"
+          },
+          "description" : ""
+        }, {
+          "target" : "CloseQtr",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat(YEAR (to_date(CloseDate)), 'Q', QUARTER (CloseDate))"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "CxB6yVD0QyF0QlsGxfaMA$$il-GiWNufQZPNOlXfZ16r##AccountId", "CxB6yVD0QyF0QlsGxfaMA$$il-GiWNufQZPNOlXfZ16r##ExpectedRevenue", "CxB6yVD0QyF0QlsGxfaMA$$il-GiWNufQZPNOlXfZ16r##Amount", "CxB6yVD0QyF0QlsGxfaMA$$il-GiWNufQZPNOlXfZ16r##CloseDate" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.46&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "B11AuWIsZWvLM0b8k_mCe$$vrD4IXutRh-gVyPJ94IR6" : {
+      "id" : "B11AuWIsZWvLM0b8k_mCe$$vrD4IXutRh-gVyPJ94IR6",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "salesforce-Opportunity",
+        "slug" : "salesforce_Opportunity",
+        "x" : -1920,
+        "y" : -420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "E6EuKTCodmYtc1zu0fzVY$$u9J65lmBTm1KCjiPqko8V",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "gitUri=http://gitserver:3000/wvwrv9bI_team_5938/wvwrv9bI_project_13587.git&subPath=&tag=course_lab_sources/0.0.3&projectSubscriptionProjectId=13587&path=datasets/salesforce-Opportunity"
+      }
+    },
+    "2RDKduvlSXxvYEx7gG2m8$$3haBOqpZo5Lbi8F9av4iF" : {
+      "id" : "2RDKduvlSXxvYEx7gG2m8$$3haBOqpZo5Lbi8F9av4iF",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "enriched_accounts",
+        "slug" : "enriched_accounts",
+        "x" : -860,
+        "y" : -740,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wIjcXyiZHJ3K3Hi-U_n-V$$OYER3J-pqXNKiJYlGWxD6",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each account in the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumOpportunities",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Amount",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ExpectedRevenue",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastCloseQtr",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IsDeleted",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the account has been marked as deleted.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MasterRecordId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the master record associated with the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Classification of the account, such as Customer or Partner.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ParentId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the parent account associated with this account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingStreet",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Street address for billing purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingCity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the billing address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingState",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "State associated with the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingPostalCode",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Postal code for the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingCountry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country where the billing address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingLatitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical latitude of the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingLongitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical longitude of the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingGeocodeAccuracy",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Accuracy level of the geocoding for the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingStreet",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Street address for shipping; includes details of the street name and number.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingCity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the account's shipping address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingState",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "State where the account's shipping address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingPostalCode",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Postal code for the account's shipping address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingCountry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country where the account's shipping address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingLatitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Latitude coordinate of the account's shipping address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingLongitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Longitude of the shipping address; Indicates the geographical longitude for shipping purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingGeocodeAccuracy",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Accuracy of the geocoding for the shipping address; Indicates the precision of the location data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Primary contact phone number for the account; Used for customer communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Fax",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Fax number associated with the account; Provides an alternative method for communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AccountNumber",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier assigned to the account; Used for tracking and reference purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Website",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The official website of the account; Provides a URL for more information about the company.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Sic",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Standard Industrial Classification code; A numerical code that categorizes the account's industry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Industry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of industry the account operates in; Describes the sector of business.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AnnualRevenue",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total revenue generated by the account in a year; Measured in long integer format.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumberOfEmployees",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees working for the account; Indicates the size of the company.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Ownership",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of ownership of the account; Indicates whether the account is Public, Private, or other classifications.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TickerSymbol",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Stock ticker symbol associated with the account; Represents the company's stock in the market.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Description",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Detailed description of the account; Provides insights into the company's operations and offerings.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Rating",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Current rating of the account; Indicates the quality or status of the account, such as Hot, Warm, or Cold.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Site",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Website URL of the account; Provides the online presence of the company.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OwnerId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the user or entity that owns the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CreatedDate",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the account was created.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CreatedById",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the user who created the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastModifiedDate",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the account was last modified.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastModifiedById",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the user who last modified the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SystemModstamp",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating the last time the record was modified in the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastActivityDate",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of the last recorded activity associated with the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Jigsaw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the Jigsaw company record, used for data enrichment.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "JigsawCompanyId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the company in the Jigsaw database.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CleanStatus",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Status indicating the cleanliness of the account data, reflecting its accuracy and completeness.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AccountSource",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Source from which the account was acquired; Indicates how the account was generated.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DunsNumber",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Dun & Bradstreet number assigned to the account; A unique identifier for business entities.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Tradestyle",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The trade name under which the account operates; Represents the brand name used in the market.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NaicsCode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "North American Industry Classification System code; Identifies the primary industry of the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NaicsDesc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the industry associated with the NAICS code; Provides a textual representation of the industry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "YearStarted",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year when the company was established.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SicDesc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the Standard Industrial Classification (SIC) code that categorizes the business.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DandbCompanyId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier assigned to the company by Dun & Bradstreet.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OperatingHoursId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the operating hours of the business.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerPriority__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Priority level assigned to the customer, indicating their importance to the business.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SLA__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Service Level Agreement status; Indicates the level of service commitment provided to the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Active__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flag indicating whether the account is currently active.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumberofLocations__c",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of locations associated with the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "UpsellOpportunity__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Potential for upselling additional products or services to the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SLASerialNumber__c",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique serial number associated with the Service Level Agreement for tracking purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SLAExpirationDate__c",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The date and time when the Service Level Agreement (SLA) expires; Format is in ISO 8601.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/enriched_accounts"
+      }
+    },
+    "G7kFrVLkU8mVDmB6FRP93$$szTHBgWv0VNTgwGxkuMT0" : {
+      "id" : "G7kFrVLkU8mVDmB6FRP93$$szTHBgWv0VNTgwGxkuMT0",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "account_opportunity_join",
+        "slug" : "account_opportunity_join",
+        "x" : -1160,
+        "y" : -740,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each account in the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "IsDeleted",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the account has been marked as deleted.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MasterRecordId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the master record associated with the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Classification of the account, such as Customer or Partner.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ParentId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the parent account associated with this account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingStreet",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Street address for billing purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingCity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the billing address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingState",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "State associated with the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingPostalCode",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Postal code for the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingCountry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country where the billing address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingLatitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical latitude of the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingLongitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical longitude of the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BillingGeocodeAccuracy",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Accuracy level of the geocoding for the billing address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingStreet",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Street address for shipping; includes details of the street name and number.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingCity",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the account's shipping address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingState",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "State where the account's shipping address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingPostalCode",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Postal code for the account's shipping address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingCountry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Country where the account's shipping address is located.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingLatitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Latitude coordinate of the account's shipping address.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingLongitude",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Longitude of the shipping address; Indicates the geographical longitude for shipping purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ShippingGeocodeAccuracy",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Accuracy of the geocoding for the shipping address; Indicates the precision of the location data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Primary contact phone number for the account; Used for customer communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Fax",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Fax number associated with the account; Provides an alternative method for communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AccountNumber",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier assigned to the account; Used for tracking and reference purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Website",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The official website of the account; Provides a URL for more information about the company.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Sic",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Standard Industrial Classification code; A numerical code that categorizes the account's industry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Industry",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of industry the account operates in; Describes the sector of business.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AnnualRevenue",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total revenue generated by the account in a year; Measured in long integer format.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumberOfEmployees",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees working for the account; Indicates the size of the company.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Ownership",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of ownership of the account; Indicates whether the account is Public, Private, or other classifications.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TickerSymbol",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Stock ticker symbol associated with the account; Represents the company's stock in the market.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Description",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Detailed description of the account; Provides insights into the company's operations and offerings.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Rating",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Current rating of the account; Indicates the quality or status of the account, such as Hot, Warm, or Cold.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Site",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Website URL of the account; Provides the online presence of the company.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OwnerId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the user or entity that owns the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CreatedDate",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the account was created.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CreatedById",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the user who created the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastModifiedDate",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating when the account was last modified.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastModifiedById",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the user who last modified the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SystemModstamp",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Timestamp indicating the last time the record was modified in the system.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastActivityDate",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date of the last recorded activity associated with the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Jigsaw",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the Jigsaw company record, used for data enrichment.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "JigsawCompanyId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the company in the Jigsaw database.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CleanStatus",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Status indicating the cleanliness of the account data, reflecting its accuracy and completeness.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "AccountSource",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Source from which the account was acquired; Indicates how the account was generated.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DunsNumber",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Dun & Bradstreet number assigned to the account; A unique identifier for business entities.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Tradestyle",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The trade name under which the account operates; Represents the brand name used in the market.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NaicsCode",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "North American Industry Classification System code; Identifies the primary industry of the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NaicsDesc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the industry associated with the NAICS code; Provides a textual representation of the industry.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "YearStarted",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year when the company was established.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SicDesc",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Description of the Standard Industrial Classification (SIC) code that categorizes the business.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DandbCompanyId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier assigned to the company by Dun & Bradstreet.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "OperatingHoursId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the operating hours of the business.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CustomerPriority__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Priority level assigned to the customer, indicating their importance to the business.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SLA__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Service Level Agreement status; Indicates the level of service commitment provided to the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Active__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flag indicating whether the account is currently active.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumberofLocations__c",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of locations associated with the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "UpsellOpportunity__c",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Potential for upselling additional products or services to the account.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SLASerialNumber__c",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique serial number associated with the Service Level Agreement for tracking purposes.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SLAExpirationDate__c",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The date and time when the Service Level Agreement (SLA) expires; Format is in ISO 8601.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "yILlC8viI0mUlkqVMYs6H$$1JMs-ZvbesjIPKoL_GDAv",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "AccountId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the account associated with the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "NumOpportunities",
+              "type" : "long",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Amount",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ExpectedRevenue",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastCloseQtr",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "RRvahEKwi_EervSbG-ydR$$iZ3GZl7kH-TQasGKF8FyJ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Id == in1.AccountId"
+          },
+          "joinType" : "left_outer"
+        } ],
+        "expressions" : [ {
+          "target" : "Id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Id"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "NumOpportunities",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.NumOpportunities"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Amount",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.Amount"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ExpectedRevenue",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.ExpectedRevenue"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "LastCloseQtr",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.LastCloseQtr"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "IsDeleted",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.IsDeleted"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "MasterRecordId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.MasterRecordId"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Name"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Type",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Type"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ParentId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ParentId"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "BillingStreet",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.BillingStreet"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "BillingCity",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.BillingCity"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "BillingState",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.BillingState"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "BillingPostalCode",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.BillingPostalCode"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "BillingCountry",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.BillingCountry"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "BillingLatitude",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.BillingLatitude"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "BillingLongitude",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.BillingLongitude"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "BillingGeocodeAccuracy",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.BillingGeocodeAccuracy"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ShippingStreet",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ShippingStreet"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ShippingCity",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ShippingCity"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ShippingState",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ShippingState"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ShippingPostalCode",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ShippingPostalCode"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ShippingCountry",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ShippingCountry"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ShippingLatitude",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ShippingLatitude"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ShippingLongitude",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ShippingLongitude"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "ShippingGeocodeAccuracy",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.ShippingGeocodeAccuracy"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Phone",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Phone"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Fax",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Fax"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "AccountNumber",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.AccountNumber"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Website",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Website"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Sic",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Sic"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Industry",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Industry"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "AnnualRevenue",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.AnnualRevenue"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "NumberOfEmployees",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.NumberOfEmployees"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Ownership",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Ownership"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "TickerSymbol",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.TickerSymbol"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Description",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Description"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Rating",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Rating"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Site",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Site"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "OwnerId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.OwnerId"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CreatedDate",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.CreatedDate"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CreatedById",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.CreatedById"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "LastModifiedDate",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.LastModifiedDate"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "LastModifiedById",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.LastModifiedById"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "SystemModstamp",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.SystemModstamp"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "LastActivityDate",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.LastActivityDate"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Jigsaw",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Jigsaw"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "JigsawCompanyId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.JigsawCompanyId"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CleanStatus",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.CleanStatus"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "AccountSource",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.AccountSource"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "DunsNumber",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.DunsNumber"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Tradestyle",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Tradestyle"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "NaicsCode",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.NaicsCode"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "NaicsDesc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.NaicsDesc"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "YearStarted",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.YearStarted"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "SicDesc",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.SicDesc"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "DandbCompanyId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.DandbCompanyId"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "OperatingHoursId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.OperatingHoursId"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "CustomerPriority__c",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.CustomerPriority__c"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "SLA__c",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.SLA__c"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "Active__c",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.Active__c"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "NumberofLocations__c",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.NumberofLocations__c"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "UpsellOpportunity__c",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.UpsellOpportunity__c"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "SLASerialNumber__c",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.SLASerialNumber__c"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "SLAExpirationDate__c",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.SLAExpirationDate__c"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "yILlC8viI0mUlkqVMYs6H$$1JMs-ZvbesjIPKoL_GDAv",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Id", "yILlC8viI0mUlkqVMYs6H$$1JMs-ZvbesjIPKoL_GDAv##AccountId", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Type", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ShippingCountry", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##BillingGeocodeAccuracy", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##BillingState", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ParentId", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##BillingCountry", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ShippingGeocodeAccuracy", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Id", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ShippingCity", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##CreatedDate", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Fax", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##MasterRecordId", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##AccountSource", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Sic", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##JigsawCompanyId", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Phone", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##CleanStatus", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##YearStarted", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Jigsaw", "yILlC8viI0mUlkqVMYs6H$$1JMs-ZvbesjIPKoL_GDAv##Amount", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ShippingState", "yILlC8viI0mUlkqVMYs6H$$1JMs-ZvbesjIPKoL_GDAv##ExpectedRevenue", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##AccountNumber", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ShippingLatitude", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##UpsellOpportunity__c", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ShippingPostalCode", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##NaicsDesc", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Website", "yILlC8viI0mUlkqVMYs6H$$1JMs-ZvbesjIPKoL_GDAv##LastCloseQtr", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##IsDeleted", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##DandbCompanyId", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##BillingCity", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##SicDesc", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##LastModifiedDate", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Ownership", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Industry", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##CustomerPriority__c", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##SLAExpirationDate__c", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ShippingLongitude", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##NumberOfEmployees", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##DunsNumber", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##SLA__c", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##BillingPostalCode", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Name", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##CreatedById", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Active__c", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##TickerSymbol", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##OperatingHoursId", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##LastModifiedById", "yILlC8viI0mUlkqVMYs6H$$1JMs-ZvbesjIPKoL_GDAv##NumOpportunities", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##OwnerId", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##ShippingStreet", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Rating", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##SystemModstamp", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Description", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##NumberofLocations__c", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##NaicsCode", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##BillingLatitude", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##SLASerialNumber__c", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Tradestyle", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##Site", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##LastActivityDate", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##BillingLongitude", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##AnnualRevenue", "-CMSMnB2nBlcd0wyo6KPA$$BKhvv85j7gkssPqAitVvl##BillingStreet" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.46&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "uIaA25ssM4xp6pmmXHXYu$$Pid4e4YMsijygYoxdo7NB" : {
+      "id" : "uIaA25ssM4xp6pmmXHXYu$$Pid4e4YMsijygYoxdo7NB",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "AggbyAccountID",
+        "slug" : "AggbyAccountID",
+        "x" : -1540,
+        "y" : -420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Fx7oy5zTVhYY5T2HJYw1L$$04yHkI69KZHd4rpFRr3Pw",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "AccountId",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the account associated with the opportunity.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Amount",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total monetary value of the opportunity; Represents the potential revenue from the sale.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ExpectedRevenue",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Projected revenue from the opportunity; Calculated based on the Amount and Probability.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CloseQtr",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "JyONtq7bzRF7TEBVHutd_$$f6059oGj0dlzTKuuyBh_B",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "NumOpportunities",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "count(1)"
+          },
+          "description" : "",
+          "_row_id" : "dTgXA0MQdP"
+        }, {
+          "target" : "Amount",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(Amount)"
+          },
+          "description" : "",
+          "_row_id" : "lTNguB9iHM"
+        }, {
+          "target" : "ExpectedRevenue",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "sum(ExpectedRevenue)"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "LastCloseQtr",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "max(CloseQtr)"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "importString" : "",
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "Fx7oy5zTVhYY5T2HJYw1L$$04yHkI69KZHd4rpFRr3Pw##CloseQtr", "Fx7oy5zTVhYY5T2HJYw1L$$04yHkI69KZHd4rpFRr3Pw##ExpectedRevenue", "Fx7oy5zTVhYY5T2HJYw1L$$04yHkI69KZHd4rpFRr3Pw##Amount", "Fx7oy5zTVhYY5T2HJYw1L$$04yHkI69KZHd4rpFRr3Pw##AccountId" ],
+        "groupBy" : [ {
+          "target" : "AccountId",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "AccountId"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.46&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
